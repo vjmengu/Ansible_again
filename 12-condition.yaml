@@ -1,17 +1,15 @@
-- name: print is the entered number is greathan than 10
+- name: print greathan or less than 10
   hosts: local
   connection: local
-  vars_prompt:
-  - name: numbers
-    prompt: please enter a number to check the value
-    private: false
+  vars:
+  - numbers: 15
   tasks:
   - name: condition check
     ansible.builtin.debug:
       msg: " the entered number is greater than 10"
-    when: {{ numbers }} > 10
+    when: numbers > 10
 
   - name: condition check
     ansible.builtin.debug:
       msg: " the entered number is less than or equal to 10"
-    when: {{ numbers }} <= 10
+    when: numbers <= 10
