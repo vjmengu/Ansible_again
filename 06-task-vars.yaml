@@ -7,9 +7,10 @@
     TRAINER: "Shiva Reddy"
   tasks:
   - name: this is task 1 with task level vars
-    COURSE: "DevOps with Ansible"
-    DURATION: "10 HRS"
-    TRAINER: "Shashank Reddy"
+    vars:
+      COURSE: "DevOps with Ansible"
+      DURATION: "10 HRS"
+      TRAINER: "Shashank Reddy"
     ansible.builtin.debug:
       msg: "The course is {{ COURSE }}, Duration is {{ DURATION }} and trainer is {{ TRAINER }}"
   - name: this is task 2 with play level vars
