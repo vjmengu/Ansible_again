@@ -1,0 +1,7 @@
+- name: take vars from inventory
+  hosts: local
+  connection: local
+  tasks:
+  - name: task1 to use vars from inventory
+    ansible.builtin.debug:
+      msg: "The course is {{ COURSE }}, duration is {{ DURATION }} and the trainer is {{ TRAINER }}"
