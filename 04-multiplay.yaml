@@ -1,0 +1,14 @@
+- name: multi play1 playbook
+  hosts: web
+  tasks:
+  - name: print from play1 task1
+    ansible.builtin.debug
+      msg: "I am from play1 task1"
+      
+- name: multi play 2 playbook
+  hosts: local
+  connection: local
+  tasks:
+  - name: print from play2 task1
+    ansible.builtin.debug:
+      msg: "I am from play2 task1"
