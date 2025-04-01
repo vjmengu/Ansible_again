@@ -2,9 +2,9 @@
   hosts: web
   tasks:
   - name: print from play1 task1
-    ansible.builtin.debug
+    ansible.builtin.debug:
       msg: "I am from play1 task1"
-      
+
 - name: multi play 2 playbook
   hosts: local
   connection: local
