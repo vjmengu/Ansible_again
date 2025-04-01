@@ -1,0 +1,18 @@
+- name: checking preference of vars execution
+  hosts: local
+  connection: local
+  vars_files:
+  - course.yaml
+  vars:
+    GREET: "from play vars"
+  vars_prompt:
+  - name: GREET
+    prompt: please enter the value for as prompt
+    private: false
+  tasks:
+  - name: this task 1
+    vars:
+      GREET: "from task vars"
+    ansible.builtin.debug:
+      msg: " {{ GREET }}"
+  
