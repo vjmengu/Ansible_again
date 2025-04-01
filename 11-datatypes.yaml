@@ -3,7 +3,7 @@
   connection: local
   vars:
     COURSE: "DevOps"
-    DURATION: "150HRS"
+    DURATION: 150
     Topics:
     - ansible
     - linux
