@@ -1,4 +1,4 @@
-- name: introducting task level vars
+- name: Introducting task level vars
   hosts: local
   connection: local
   vars:
@@ -6,13 +6,13 @@
     DURATION: "150 HRS"
     TRAINER: "Shiva Reddy"
   tasks:
-  - name: this is task 1 with task level vars
+  - name: This is task 1 with task level vars
     vars:
       COURSE: "DevOps with Ansible"
       DURATION: "10 HRS"
       TRAINER: "Shashank Reddy"
     ansible.builtin.debug:
       msg: "The course is {{ COURSE }}, Duration is {{ DURATION }} and trainer is {{ TRAINER }}"
-  - name: this is task 2 with play level vars
+  - name: This is task 2 with play level vars
     ansible.builtin.debug:
       msg: "The course is {{ COURSE }}, Duration is {{ DURATION }} and trainer is {{ TRAINER }}"
