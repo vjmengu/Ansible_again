@@ -1,0 +1,20 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "DevOps"
+    DURATION: "150HRS"
+    Topics:
+    - ansible
+    - linux
+    - git
+    - aws
+    live: true
+    tools:
+      ci: jenkins
+      cloud: aws
+      containerization: docker
+  tasks:
+  - name: print different data types is the task 1
+    ansible.builtin.debug:
+      msg: " {{ COURSE }}, {{ DURATION }}, {{ Topics }}, {{ live }} , {{ tools }}"
