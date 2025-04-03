@@ -25,10 +25,14 @@
     ansible.builtin.debug:
       msg: "The course details are {{ course | items2dict }}"
 
-  - name: everything upper and everything lower
+  - name: everything upper
     vars:
       name: "viJay JOhN"
     ansible.builtin.debug:
       msg: " {{ name | upper }}"
+
+  - name: everything lower
+    vars:
+      name: "viJay JOhN"
     ansible.builtin.debug:
       msg: " {{ name | lower }}"
