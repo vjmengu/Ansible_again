@@ -23,4 +23,4 @@
     vars:
       course: [ {'key': 'name', 'value': 'AWS'}, {'key': 'duration', 'value': '10hrs'},{'key': 'trainer', 'value': 'VJ'} ]
     ansible.builtin.debug:
-      msg: "The course details are {{ course | items2map }}"
+      msg: "The course details are {{ course | items2dict }}"
