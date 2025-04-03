@@ -1,0 +1,15 @@
+- name: use loop to install packages independently
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: 'gcc', state: 'present' }
+    - { name: 'mysql', state: 'absent' }
+    - { name: 'git', state: 'present' }
+    - { name: 'zip', state: 'absent' }
+    
