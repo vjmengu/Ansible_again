@@ -36,3 +36,9 @@
       name: "viJay JOhN"
     ansible.builtin.debug:
       msg: " {{ name | lower }}"
+
+  - name: print max and min number in a list
+    vars:
+      numbers: [1,23,455,8789,98902,0.5]
+    ansible.builtin.debug:
+      msg: "the min in list is {{ numbers | min}} and the max in the list is {{ numbers | max}}"
