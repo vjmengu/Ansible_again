@@ -42,3 +42,9 @@
       numbers: [1,23,455,8789,98902,0.5]
     ansible.builtin.debug:
       msg: "the min in list is {{ numbers | min}} and the max in the list is {{ numbers | max}}"
+
+  - name: check if IP adress entered is correct
+    vars:
+      IP: "192.34.2.1"
+    ansible.builtin.debug:
+      msg: "{{ IP | ansible.utlis.ipaddr }}"
