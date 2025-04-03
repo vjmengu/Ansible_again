@@ -5,3 +5,8 @@
   - name: handle undefined variable
     ansible.builtin.debug:
       msg: " {{ name | default('vijay') }}"
+  - name: string to list convertion
+    vars:
+      fruits: "banana, apple, strawberry, carrot"
+    ansible.builtin.debug:
+      msg: " different fruits are {{ fruits | split(',') }}"
