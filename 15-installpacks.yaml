@@ -1,10 +1,11 @@
 - name: install packages using loop
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: install packages
     ansible.builtin.package:
-      name: {{ item }}
+      name: "{{ item }}"
       state: installed
     loop:
     - gcc
