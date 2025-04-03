@@ -24,3 +24,11 @@
       course: [ {'key': 'name', 'value': 'AWS'}, {'key': 'duration', 'value': '10hrs'},{'key': 'trainer', 'value': 'VJ'} ]
     ansible.builtin.debug:
       msg: "The course details are {{ course | items2dict }}"
+
+  - name: everything upper and everything lower
+    vars:
+      name: "viJay JOhN"
+    ansible.builtin.debug:
+      msg: " {{ name | upper }}"
+    ansible.builtin.debug:
+      msg: " {{ name | lower }}"
